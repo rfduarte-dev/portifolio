@@ -67,6 +67,7 @@ ScrollReveal().reveal('.portifolio__title', slideTop)
 ScrollReveal().reveal('.cards', slideBotton)
 ScrollReveal().reveal('.contact__info', slideleft)
 ScrollReveal().reveal('.contact__form', slideright)
+ScrollReveal().reveal('.elements', slideBotton)
 
 // Typewriter
 const app = document.querySelector('.home__typewrite')

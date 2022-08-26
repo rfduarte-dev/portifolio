@@ -318,6 +318,7 @@ section#home .elements img:nth-child(1) {
   left: 35%;
   width: 60px;
 }
+
 section#home .elements img:nth-child(2) {
   position: absolute;
   bottom: 10%;
@@ -1618,6 +1619,21 @@ section#home .elements img:nth-child(2) {
     padding-top: 2rem;
   }
 
+  section#home .elements img:nth-child(1) {
+    position: absolute;
+    top: 360px;
+    left: 75%;
+    width: 60px;
+  }
+
+  section#home .elements img:nth-child(2) {
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    width: 80px;
+    opacity: 0.5;
+  }
+
   .home__info {
     width: 100%;
     height: fit-content;
@@ -1867,8 +1883,10 @@ section#home .elements img:nth-child(2) {
 
   /* Contato */
   #contato {
+    position: relative;
     padding-top: 6rem;
   }
+
   .contact__info {
     display: flex;
     flex-direction: column;
@@ -1876,6 +1894,14 @@ section#home .elements img:nth-child(2) {
     width: 100%;
     padding-right: 0rem;
   }
+
+  section#contato .elements img {
+    position: absolute;
+    top: 90px;
+    left: 7vh;
+    width: 125px;
+  }
+
   .contact__title {
     height: auto;
   }
