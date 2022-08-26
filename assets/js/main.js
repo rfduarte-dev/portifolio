@@ -212,16 +212,30 @@ function activeLink() {
   menuLinks.forEach((link) => link.classList.remove('active'))
   //menuLinks[currentSection].classList.add('active')
 }
+activeLink()
 
 // Send Form ====
 
 const submitBtn = document.querySelector('.contact__form form button')
+const form = document.querySelector('.contact__form form')
 
-// submitBtn.addEventListener('click', (e) => {
-//   e.preventDefault()
-//   const nameForm = document.querySelector('.form__input-nome')
-//   const emailForm = document.querySelector('.form__input-email')
-//   const msgForm = document.querySelector('form__input-msg')
-//   console.log(nameForm.value)
-//   console.log(emailForm.value)
-// })
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+
+  const nameForm = document.querySelector('.form__input-nome')
+  const emailForm = document.querySelector('.form__input-email')
+  const msgForm = document.querySelector('.form__input-msg')
+
+  validaForm(nameForm, emailForm, msgForm)
+})
+
+function validaForm(nome, email, msg) {
+  const mailformat =
+    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+  if (!nome.value) alert('nome invalido')
+  if (!email.value.match(mailformat)) alert('email invalido')
+  if (!msg.value) alert('msg invalido')
+
+  //form.submit()
+}
