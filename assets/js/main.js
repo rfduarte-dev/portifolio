@@ -18,7 +18,13 @@ const slideTop = {
   reset: true,
   origin: 'top',
   distance: '100px',
-  easing: 'cubic-bezier(.53,-0.23,.4,1.26)'
+  easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
+  viewOffset: {
+    top: 100,
+    right: 0,
+    bottom: 0,
+    left: 0
+  }
 }
 const slideBotton = {
   mobile: true,
@@ -48,17 +54,19 @@ const slideright = {
   easing: 'cubic-bezier(.53,-0.23,.4,1.26)'
 }
 
-// ScrollReveal().reveal('.home__info', slideTop)
-// ScrollReveal().reveal('.home__img', slideBotton)
-// ScrollReveal().reveal('.sobre__img', slideleft)
-// ScrollReveal().reveal('.sobre__info', slideright)
-// ScrollReveal().reveal('.service__title', slideTop)
-// ScrollReveal().reveal('.service__front', slideleft)
-// ScrollReveal().reveal('.service__design', slideright)
-// ScrollReveal().reveal('.skill__title', slideTop)
-// ScrollReveal().reveal('.skill__container', slideBotton)
-// ScrollReveal().reveal('.portifolio__title', slideTop)
-// ScrollReveal().reveal('.cards', slideBotton)
+ScrollReveal().reveal('.home__info', slideTop)
+ScrollReveal().reveal('.home__img', slideBotton)
+ScrollReveal().reveal('.sobre__img', slideleft)
+ScrollReveal().reveal('.sobre__info', slideright)
+ScrollReveal().reveal('.service__title', slideTop)
+ScrollReveal().reveal('.service__front', slideleft)
+ScrollReveal().reveal('.service__design', slideright)
+ScrollReveal().reveal('.skill__title', slideTop)
+ScrollReveal().reveal('.skill__container', slideBotton)
+ScrollReveal().reveal('.portifolio__title', slideTop)
+ScrollReveal().reveal('.cards', slideBotton)
+ScrollReveal().reveal('.contact__info', slideleft)
+ScrollReveal().reveal('.contact__form', slideright)
 
 // Typewriter
 const app = document.querySelector('.home__typewrite')
@@ -202,5 +210,5 @@ function activeLink() {
   let currentSection = passedSections.at(-1).id
 
   menuLinks.forEach((link) => link.classList.remove('active'))
-  menuLinks[currentSection].classList.add('active')
+  menuLinks[currentSection].classList.add('active') //
 }
