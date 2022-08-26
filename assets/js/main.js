@@ -67,7 +67,10 @@ ScrollReveal().reveal('.portifolio__title', slideTop)
 ScrollReveal().reveal('.cards', slideBotton)
 ScrollReveal().reveal('.contact__info', slideleft)
 ScrollReveal().reveal('.contact__form', slideright)
-ScrollReveal().reveal('.elements', slideBotton)
+//elementos
+ScrollReveal().reveal('.elm_triangle', slideright)
+ScrollReveal().reveal('.elm_circles', slideright)
+ScrollReveal().reveal('.rafa_emoticon02', slideright)
 
 // Typewriter
 const app = document.querySelector('.home__typewrite')

@@ -1895,10 +1895,10 @@ section#home .elements img:nth-child(2) {
     padding-right: 0rem;
   }
 
-  section#contato .elements img {
+  section#contato .rafa_emoticon02 {
     position: absolute;
-    top: 90px;
-    left: 7vh;
+    top: 7%;
+    left: 60%;
     width: 125px;
   }
 
