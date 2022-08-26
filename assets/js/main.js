@@ -202,18 +202,6 @@ function activeLink() {
   let currentSection = passedSections.at(-1).id
 
   menuLinks.forEach((link) => link.classList.remove('active'))
-  //menuLinks[currentSection].classList.add('active')
+  menuLinks[currentSection].classList.add('active')
 }
 
-// Send Form ====
-
-const submitBtn = document.querySelector('.contact__form form button')
-
-// submitBtn.addEventListener('click', (e) => {
-//   e.preventDefault()
-//   const nameForm = document.querySelector('.form__input-nome')
-//   const emailForm = document.querySelector('.form__input-email')
-//   const msgForm = document.querySelector('form__input-msg')
-//   console.log(nameForm.value)
-//   console.log(emailForm.value)
-// })
