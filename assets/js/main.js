@@ -240,3 +240,4 @@ function validaForm(nome, email, msg) {
 
   //form.submit()
 }
+console.log('123')
