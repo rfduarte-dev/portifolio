@@ -444,7 +444,7 @@ section#home .elements img:nth-child(2) {
   background-color: var(--text-light-color);
   opacity: 0.15;
   z-index: -1;
-  animation: circleHome 10s linear infinite;
+  animation: circleHome 10s linear alternate infinite;
 }
 
 .home__social {
