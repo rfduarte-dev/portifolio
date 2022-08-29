@@ -11,7 +11,7 @@ scrolled()
 
 window.addEventListener('scroll', scrolled)
 
-// button to top
+// button to top ===================
 function btnToTop() {
   const btnToTop = document.querySelector('.btn__top')
   const btnToTopClick = document.querySelector('.btn__top a')
@@ -30,7 +30,7 @@ function btnToTop() {
   })
 }
 
-// ScrollReveal
+// ScrollReveal ===================
 const slideTop = {
   mobile: true,
   delay: 250,
@@ -104,15 +104,15 @@ ScrollReveal().reveal('.contact__info', slideleft)
 ScrollReveal().reveal('.contact__form', slideright)
 // Titles
 ScrollReveal().reveal('#serviços .title', slideTop) //serviços
-ScrollReveal().reveal('#habilidades .title', slideTop) //serviços
-ScrollReveal().reveal('#portifolio .title', slideTop) //serviços
+ScrollReveal().reveal('#habilidades .title', slideTop) //habilidades
+ScrollReveal().reveal('#portifolio .title', slideTop) //portifolio
 
 //elementos
 ScrollReveal().reveal('.elm_triangle', slideright)
 ScrollReveal().reveal('.elm_circles', slideright)
 ScrollReveal().reveal('.rafa_emoticon02', slideright)
 
-// Typewriter
+// Typewriter ===================
 const app = document.querySelector('.home__typewrite')
 
 const typewriter = new Typewriter(app, {
@@ -178,6 +178,7 @@ const swiper = new Swiper('.cards', {
   spaceBetween: 120,
   centeredSlides: true,
   cssMode: true,
+  passiveListeners: true,
   loop: false,
   grabCursor: true,
   navigation: {

@@ -909,6 +909,7 @@ section#home .elements img:nth-child(2) {
 }
 
 .cards {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
