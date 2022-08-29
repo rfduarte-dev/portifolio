@@ -43,16 +43,20 @@
             <li><a href="#serviços">Serviços</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#portifolio">Portifólio</a></li>
+            <li>
+              <a href="#contato"
+                ><i class="uil uil-envelope-check"></i>Contato</a
+              >
+            </li>
           </ul>
-        </div>
-
-        <div class="btn__hero">
-          <a href="#contato" class="nav__contact-button"
-            >contato <i class="uil uil-message"></i
-          ></a>
         </div>
       </nav>
     </header>
+
+    <!-- Go to Top -->
+    <div class="btn__top">
+      <a href="#home"><i class="uil uil-arrow-up"></i></a>
+    </div>
 
     <!-- Home -->
     <section id="home" class="home">
@@ -63,11 +67,13 @@
 
       <div class="wrapper">
         <div class="home__info">
-          <h3>Olá eu sou o</h3>
-          <h1>
-            Rafael, <br />
-            <span class="home__typewrite">designer</span>
-          </h1>
+          <div class="title">
+            <h3>Olá eu sou o</h3>
+            <h1>
+              Rafael, <br />
+              <span class="home__typewrite">designer</span>
+            </h1>
+          </div>
           <p>Sou um freelancer Frontend Dev, que tal trabalharmos juntos.</p>
 
           <div class="btn__hero">
@@ -110,8 +116,10 @@
         </div>
 
         <div class="sobre__info">
-          <small>sobre mim</small>
-          <h1>Proporcionando <br />as melhores experiências</h1>
+          <div class="title">
+            <small>sobre mim</small>
+            <h1>Proporcionando <br />as melhores experiências</h1>
+          </div>
           <p>
             Olá eu sou o Rafael, sou pai de família e trabalho como designer a
             mais de 10 anos, sempre muito curioso , já me aventurei com outras
@@ -160,7 +168,7 @@
       </div>
 
       <div class="wrapper">
-        <div class="service__title">
+        <div class="title">
           <h1>Serviços</h1>
           <h3>o que eu ofereço</h3>
         </div>
@@ -188,7 +196,7 @@
     <!-- Habilidades -->
     <section id="habilidades">
       <div class="wrapper">
-        <div class="skill__title">
+        <div class="title">
           <h1>Habilidades</h1>
           <h3>meu nível técnico</h3>
         </div>
@@ -364,19 +372,9 @@
 
     <!-- Portifolio -->
     <section id="portifolio">
-      <!-- Modal Img -->
-      <div class="modal__img-portifolio">
-        <i class="uil uil-angle-left"></i>
-        <img src="./assets/img/real-state.png" alt="" />
-        <img src="./assets/img/doctor-care.png" alt="" />
-        <img src="./assets/img/jogo-da-velha.png" alt="" />
-        <i class="uil uil-angle-right"></i>
-        <div class="modal__overlay"></div>
-      </div>
-
       <!-- Preview Swipe -->
       <div class="wrapper">
-        <div class="portifolio__title">
+        <div class="title">
           <h1>Portifólio</h1>
           <h3>conheça um pouco do meu trabalho</h3>
         </div>
@@ -386,17 +384,6 @@
             <!-- Real State -->
             <div class="card__job swiper-slide">
               <div class="card__img">
-                <div class="card__img-icons">
-                  <a class="card__img-zoom"
-                    ><i class="uil uil-image-search"></i
-                  ></a>
-                  <a
-                    href="https://rfduarte-dev.github.io/realestate/"
-                    target="_blank"
-                    ><i class="uil uil-link"></i
-                  ></a>
-                </div>
-
                 <img src="./assets/img/real-state.png" alt="" />
               </div>
               <span class="card__info">Real State</span>
@@ -412,17 +399,6 @@
             <!-- Doctor Care -->
             <div class="card__job swiper-slide">
               <div class="card__img">
-                <div class="card__img-icons">
-                  <a class="card__img-zoom"
-                    ><i class="uil uil-image-search"></i
-                  ></a>
-                  <a
-                    href="https://rfduarte-dev.github.io/doctorcare/"
-                    target="_blank"
-                    ><i class="uil uil-link"></i
-                  ></a>
-                </div>
-
                 <img src="./assets/img/doctor-care.png" alt="" />
               </div>
               <span class="card__info">DoctorCare</span>
@@ -438,17 +414,6 @@
             <!-- Jogo da Velha -->
             <div class="card__job swiper-slide">
               <div class="card__img">
-                <div class="card__img-icons">
-                  <a class="card__img-zoom"
-                    ><i class="uil uil-image-search"></i
-                  ></a>
-                  <a
-                    href="https://rfduarte-dev.github.io/tictactoe/"
-                    target="_blank"
-                    ><i class="uil uil-link"></i
-                  ></a>
-                </div>
-
                 <img src="./assets/img/jogo-da-velha.png" alt="" />
               </div>
               <span class="card__info">Jogo da Velha</span>
@@ -478,11 +443,15 @@
     <!-- Contato -->
     <section id="contato">
       <div class="elements">
-        <img class="rafa_emoticon02" src="./assets/img/02.png" alt="rafa emoticon03" />
+        <img
+          class="rafa_emoticon02"
+          src="./assets/img/02.png"
+          alt="rafa emoticon03"
+        />
       </div>
       <div class="wrapper">
         <div class="contact__info">
-          <div class="contact__title">
+          <div class="title">
             <h3>entre em contato</h3>
             <h1>Vamos trabalhar juntos?</h1>
           </div>

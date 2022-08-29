@@ -4,11 +4,31 @@ const navBar = document.querySelector('header.nav__menu')
 function scrolled() {
   navBar.classList.toggle('scrolled', window.pageYOffset > 0)
   activeLink()
+  btnToTop()
 }
 
 scrolled()
 
 window.addEventListener('scroll', scrolled)
+
+// button to top
+function btnToTop() {
+  const btnToTop = document.querySelector('.btn__top')
+  const btnToTopClick = document.querySelector('.btn__top a')
+  const body = document.querySelector('body')
+
+  if (body.getBoundingClientRect().top < -50) {
+    btnToTop.classList.add('btn__top-active')
+  } else {
+    btnToTop.classList.remove('btn__top-active')
+  }
+
+  btnToTopClick.addEventListener('click', () => {
+    if (btnToTop.classList.contains('btn__top-active')) {
+      btnToTop.classList.remove('btn__top-active')
+    }
+  })
+}
 
 // ScrollReveal
 const slideTop = {
@@ -20,7 +40,7 @@ const slideTop = {
   distance: '100px',
   easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
   viewOffset: {
-    top: 100,
+    top: 0,
     right: 0,
     bottom: 0,
     left: 0
@@ -33,7 +53,13 @@ const slideBotton = {
   reset: true,
   origin: 'bottom',
   distance: '100px',
-  easing: 'cubic-bezier(.53,-0.23,.4,1.26)'
+  easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
+  viewOffset: {
+    top: 100,
+    right: 0,
+    bottom: 0,
+    left: 0
+  }
 }
 const slideleft = {
   mobile: true,
@@ -42,7 +68,13 @@ const slideleft = {
   reset: true,
   origin: 'left',
   distance: '100px',
-  easing: 'cubic-bezier(.53,-0.23,.4,1.26)'
+  easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
+  viewOffset: {
+    top: 100,
+    right: 0,
+    bottom: 0,
+    left: 0
+  }
 }
 const slideright = {
   mobile: true,
@@ -51,22 +83,30 @@ const slideright = {
   reset: true,
   origin: 'rigt',
   distance: '100px',
-  easing: 'cubic-bezier(.53,-0.23,.4,1.26)'
+  easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
+  viewOffset: {
+    top: 100,
+    right: 0,
+    bottom: 0,
+    left: 0
+  }
 }
 
 ScrollReveal().reveal('.home__info', slideTop)
 ScrollReveal().reveal('.home__img', slideBotton)
 ScrollReveal().reveal('.sobre__img', slideleft)
 ScrollReveal().reveal('.sobre__info', slideright)
-ScrollReveal().reveal('.service__title', slideTop)
 ScrollReveal().reveal('.service__front', slideleft)
 ScrollReveal().reveal('.service__design', slideright)
-ScrollReveal().reveal('.skill__title', slideTop)
 ScrollReveal().reveal('.skill__container', slideBotton)
-ScrollReveal().reveal('.portifolio__title', slideTop)
 ScrollReveal().reveal('.cards', slideBotton)
 ScrollReveal().reveal('.contact__info', slideleft)
 ScrollReveal().reveal('.contact__form', slideright)
+// Titles
+ScrollReveal().reveal('#serviços .title', slideTop) //serviços
+ScrollReveal().reveal('#habilidades .title', slideTop) //serviços
+ScrollReveal().reveal('#portifolio .title', slideTop) //serviços
+
 //elementos
 ScrollReveal().reveal('.elm_triangle', slideright)
 ScrollReveal().reveal('.elm_circles', slideright)
@@ -81,7 +121,7 @@ const typewriter = new Typewriter(app, {
 })
 
 typewriter
-  .pauseFor(3500)
+  .pauseFor(2500)
   .typeString('designer <i class="uil uil-pen"></i>')
   .pauseFor(1500)
   .deleteChars(20)
@@ -89,11 +129,10 @@ typewriter
   .pauseFor(2000)
   .deleteChars(20)
   .typeString('freelancer <i class="uil uil-thumbs-up"></i>')
-  .pauseFor(4000)
+  .pauseFor(3250)
   .start()
 
-// Modal ===================
-
+// Modal Serviços ===================
 const frontendModal = document.querySelector('.modal__frontend')
 const designModal = document.querySelector('.modal__design')
 const fontBtnView = document.querySelector('.front__service')
@@ -115,11 +154,10 @@ closeModal.forEach((target) => {
   })
 })
 
-// Habilidades
+// Habilidades ==========================
 //.scrollHeight
 
 const skillitens = document.querySelectorAll('.skill__container')
-
 skillitens.forEach((target) => {
   target.addEventListener('click', () => {
     const itemInfo = target.querySelector('.skill__info-itens')
@@ -152,28 +190,7 @@ const swiper = new Swiper('.cards', {
   }
 })
 
-// Modal Img =========================================
-const imgZoom = document.querySelectorAll('.card__img-zoom')
-const modalOverlay = document.querySelector('.modal__overlay')
-const modalPortifolio = document.querySelector('.modal__img-portifolio')
-const modalImgs = modalPortifolio.querySelectorAll('img')
-
-imgZoom.forEach((icon, indice) =>
-  icon.addEventListener('click', () => {
-    modalPortifolio.classList.add('open')
-    modalImgs[indice].classList.add('open')
-  })
-)
-
-modalOverlay.addEventListener('click', () => {
-  modalPortifolio.classList.remove('open')
-  modalImgs.forEach((img) => {
-    img.classList.remove('open')
-  })
-})
-
 // Menu Mobile ==========================
-
 const btnMenu = document.querySelector('.btn__menu-mobile')
 const menuLinks = document.querySelectorAll('.nav__link ul li')
 const contactBtn = document.querySelector('.btn__hero a')
@@ -200,7 +217,7 @@ btnMenu.addEventListener('click', () => {
   }
 })
 
-// Current Section =====
+// Section ativa =====
 function activeLink() {
   const menuLinks = document.querySelectorAll('.nav__link ul li')
   const header = document.querySelector('header')
@@ -219,7 +236,6 @@ function activeLink() {
 activeLink()
 
 // Send Form ====
-
 const submitBtn = document.querySelector('.contact__form form button')
 const form = document.querySelector('.contact__form form')
 
@@ -243,4 +259,3 @@ function validaForm(nome, email, msg) {
 
   //form.submit()
 }
-console.log('123')
