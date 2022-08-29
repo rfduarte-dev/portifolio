@@ -252,31 +252,13 @@ a.nav__logo {
 }
 
 .nav__logo {
+  width: 200px;
+  height: 100%;
   display: flex;
-  gap: 0.25rem;
-  font-family: var(--title-font);
-  font-weight: 700;
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: 0px;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-}
-
-.nav__logo pre {
-  font-family: var(--second-font);
-  font-size: 0.9rem;
-  color: var(--text-light-color);
-  transition: 0.3s;
-}
-
-.nav__logo:hover pre {
-  margin: 0 0.15rem;
-}
-
-.nav__logo span {
-  font-family: var(--title-font);
-  font-weight: 600;
-  color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
 .nav__menu {
@@ -1426,6 +1408,7 @@ section#home .elements img:nth-child(2) {
   }
 
   /* Navbar */
+
   .nav__menu {
     position: fixed;
     display: flex;
@@ -1437,6 +1420,10 @@ section#home .elements img:nth-child(2) {
     opacity: 1;
     z-index: 10;
     transition: 0.3s;
+  }
+
+  .nav__logo {
+    margin-bottom: 0;
   }
 
   .nav__menu.open {
@@ -1474,7 +1461,7 @@ section#home .elements img:nth-child(2) {
   }
 
   .nav__menu.open .nav__logo {
-    width: 100%;
+    width: 60%;
     display: flex;
     justify-content: flex-start;
     gap: 0.25rem;
@@ -1496,7 +1483,7 @@ section#home .elements img:nth-child(2) {
     font-size: 2rem;
     color: var(--primary-color);
     cursor: pointer;
-    top: 1.5rem;
+    top: 2.45rem;
     right: 2rem;
     transition: 0.3s;
   }
@@ -1582,6 +1569,7 @@ section#home .elements img:nth-child(2) {
     align-items: center;
     justify-content: center;
     order: 1;
+    padding-top: 6rem;
   }
 
   .home__img div {
