@@ -125,7 +125,7 @@ typewriter
   .typeString('designer <i class="uil uil-pen"></i>')
   .pauseFor(1500)
   .deleteChars(20)
-  .typeString('frontend devloper <i class="uil uil-arrow"></i>')
+  .typeString('frontend <i class="uil uil-arrow"></i>    ')
   .pauseFor(2000)
   .deleteChars(20)
   .typeString('freelancer <i class="uil uil-thumbs-up"></i>')
