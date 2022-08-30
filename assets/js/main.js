@@ -172,7 +172,7 @@ skillitens.forEach((target) => {
   })
 })
 
-// Swipper
+// Swipper ==========================
 const swiper = new Swiper('.cards', {
   slidesPerView: 'auto',
   spaceBetween: 120,
@@ -251,12 +251,46 @@ submitBtn.addEventListener('click', (e) => {
 })
 
 function validaForm(nome, email, msg) {
+  const alertNome = document.querySelector('.alert__nome')
+  const alertEmail = document.querySelector('.alert__email')
+  const alertMsg = document.querySelector('.alert__msg')
   const mailformat =
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
-  if (!nome.value) alert('nome invalido')
-  if (!email.value.match(mailformat)) alert('email invalido')
-  if (!msg.value) alert('msg invalido')
+  if (!nome.value) {
+    alertNome.classList.add('open')
+    alertNome.innerHTML = `
+    <p class="input__alert">
+    <i class="uil uil-exclamation-triangle"></i>
+    precisa conter um nome
+    </p>`
+  } else {
+    alertNome.classList.remove('open')
+  }
 
-  //form.submit()
+  if (!email.value.match(mailformat)) {
+    alertEmail.classList.add('open')
+    alertEmail.innerHTML = `
+    <p class="input__alert">
+    <i class="uil uil-exclamation-triangle"></i>
+    email inválido
+    </p>`
+  } else {
+    alertEmail.classList.remove('open')
+  }
+
+  if (!msg.value) {
+    alertMsg.classList.add('open')
+    alertMsg.innerHTML = `
+    <p class="input__alert">
+    <i class="uil uil-exclamation-triangle"></i>
+    precisa conter uma mensagem
+    </p>`
+  } else {
+    alertMsg.classList.remove('open')
+  }
+
+  if (nome.value && email.value && msg.value) {
+    form.submit()
+  }
 }
