@@ -1327,7 +1327,7 @@ section#home .elements img:nth-child(2) {
   font-size: 1rem;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   @keyframes circleHome {
     0% {
       left: -5%;
@@ -1470,9 +1470,9 @@ section#home .elements img:nth-child(2) {
   }
 
   .nav__menu .wrapper {
+    max-width: 100%;
     position: relative;
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
@@ -1487,6 +1487,7 @@ section#home .elements img:nth-child(2) {
   }
 
   .nav__menu.open .wrapper {
+    width: 100%;
     gap: 2rem;
     flex-direction: column;
     background-color: #fff;
