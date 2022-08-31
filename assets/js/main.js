@@ -218,7 +218,7 @@ btnMenu.addEventListener('click', () => {
   }
 })
 
-// Section ativa =====
+// Section ativa ==========================
 function activeLink() {
   const menuLinks = document.querySelectorAll('.nav__link ul li')
   const header = document.querySelector('header')
@@ -236,7 +236,7 @@ function activeLink() {
 }
 activeLink()
 
-// Send Form ====
+// Send Form ==========================
 const submitBtn = document.querySelector('.contact__form form button')
 const form = document.querySelector('.contact__form form')
 
