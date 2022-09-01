@@ -33,8 +33,8 @@ function btnToTop() {
 // ScrollReveal ===================
 const slideTop = {
   mobile: true,
-  delay: 100,
-  duration: 500,
+  delay: 250,
+  duration: 750,
   reset: true,
   origin: 'top',
   distance: '100px',
@@ -48,8 +48,8 @@ const slideTop = {
 }
 const slideBotton = {
   mobile: true,
-  delay: 100,
-  duration: 500,
+  delay: 250,
+  duration: 750,
   reset: true,
   origin: 'bottom',
   distance: '100px',
@@ -63,8 +63,8 @@ const slideBotton = {
 }
 const slideleft = {
   mobile: true,
-  delay: 100,
-  duration: 500,
+  delay: 250,
+  duration: 750,
   reset: true,
   origin: 'left',
   distance: '100px',
@@ -78,8 +78,8 @@ const slideleft = {
 }
 const slideright = {
   mobile: true,
-  delay: 100,
-  duration: 500,
+  delay: 250,
+  duration: 750,
   reset: true,
   origin: 'rigt',
   distance: '100px',
