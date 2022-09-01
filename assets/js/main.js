@@ -239,9 +239,15 @@ activeLink()
 // Send Form ==========================
 const submitBtn = document.querySelector('.contact__form form button')
 const form = document.querySelector('.contact__form form')
+const nameForm = document.querySelector('.form__input-nome')
+const emailForm = document.querySelector('.form__input-email')
+const msgForm = document.querySelector('.form__input-msg')
 
-submitBtn.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault()
+
+  submitBtn.innerHTML = '<i class="uil uil-spinner"></i>'
+  submitBtn.classList.add('load')
 
   const nameForm = document.querySelector('.form__input-nome')
   const emailForm = document.querySelector('.form__input-email')
@@ -254,6 +260,7 @@ function validaForm(nome, email, msg) {
   const alertNome = document.querySelector('.alert__nome')
   const alertEmail = document.querySelector('.alert__email')
   const alertMsg = document.querySelector('.alert__msg')
+  const successMsg = document.querySelector('.success__msg')
   const mailformat =
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
@@ -291,6 +298,32 @@ function validaForm(nome, email, msg) {
   }
 
   if (nome.value && email.value && msg.value) {
-    form.submit()
+    //form.submit()
+
+    sendMail(nome.value, email.value, msg.value)
+    nome.value = ''
+    email.value = ''
+    msg.value = ''
+  }
+
+  function sendMail(nome, email, msg) {
+    fetch('https://formsubmit.co/ajax/0a892a84953d6ee97eba9389283cf6c1', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify({
+        Nome: nome,
+        Email: email,
+        Menssagem: msg
+      })
+    })
+      .then((response) => {
+        successMsg.classList.add('success')
+        submitBtn.classList.remove('load')
+        submitBtn.innerHTML = 'enviar <i class="uil uil-message"></i>'
+      })
+      .catch((error) => console.log(error))
   }
 }
