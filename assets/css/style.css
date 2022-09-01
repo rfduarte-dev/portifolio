@@ -497,6 +497,59 @@ section#home .elements img:nth-child(2) {
   opacity: 1;
 }
 
+/* Sucess msg */
+
+.sucess .wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.success__msg .tittle h1 {
+  position: relative;
+  font-family: var(--title-font);
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.success__msg .title h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  font-family: var(--title-font);
+  font-size: 3rem;
+  line-height: 2.75rem;
+  margin: 1rem 0;
+}
+
+.success__msg .title h1 span {
+  color: var(--primary-color);
+}
+
+.success__msg .title h3,
+.success__msg .title small {
+  position: relative;
+  padding: 1rem 0rem 1rem 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.success__msg .title h3::after,
+.success__msg .title small::after {
+  content: '';
+  position: absolute;
+  top: 0.87rem;
+  left: 0;
+  display: block;
+  width: 4px;
+  height: 1.5rem;
+  background-color: var(--primary-color);
+  border-radius: 0.25rem;
+  opacity: 0.5;
+}
+
 /* Sobre */
 
 #sobre .wrapper {
