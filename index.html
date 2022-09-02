@@ -30,6 +30,10 @@
       type="image/svg"
     />
 
+    <!-- tags para melhorar o CEO  -->
+    <meta name="description" content="Rafael Desenvolvedor web" />
+    <meta name="keywords" content="rafael, programador, desenvolvedor, web" />
+
     <title>Rafa Dev</title>
   </head>
   <body>
@@ -156,6 +160,8 @@
     <!-- Serviços -->
     <section id="serviços">
       <!-- Modal -->
+      <div class="modal__overlay"></div>
+
       <div class="modal__frontend">
         <button href="" class="modal__close">X</button>
         <h3 class="modal__title"><i class="uil uil-arrow"></i>Frontend</h3>
@@ -171,6 +177,7 @@
           </li>
         </ul>
       </div>
+
       <div class="modal__design">
         <button href="" class="modal__close">X</button>
         <h3 class="modal__title"><i class="uil uil-edit"></i>Design</h3>
@@ -193,17 +200,17 @@
           <div class="service__front">
             <i class="uil uil-arrow"></i>
             <h3>Frontend</h3>
-            <a class="front__service"
-              >veja mais<i class="uil uil-arrow-right"></i
-            ></a>
+            <button class="front__service">
+              veja mais<i class="uil uil-arrow-right"></i>
+            </button>
           </div>
 
           <div class="service__design">
             <i class="uil uil-edit"></i>
             <h3>Design</h3>
-            <a class="design__service"
-              >veja mais<i class="uil uil-arrow-right"></i
-            ></a>
+            <button class="design__service">
+              veja mais<i class="uil uil-arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -499,6 +506,7 @@
                 class="form__input-nome"
                 type="text"
                 name="nome"
+                id="nome"
                 required
               />
               <label for="nome"><i class="uil uil-user"></i>Nome</label>
@@ -510,6 +518,7 @@
                 class="form__input-email"
                 type="text"
                 name="email"
+                id="email"
                 required
               />
               <label for="email"

@@ -137,20 +137,30 @@ const frontendModal = document.querySelector('.modal__frontend')
 const designModal = document.querySelector('.modal__design')
 const fontBtnView = document.querySelector('.front__service')
 const designBtnView = document.querySelector('.design__service')
+const modal = document.querySelector('.modal__overlay')
 const closeModal = document.querySelectorAll('.modal__close')
 
 fontBtnView.addEventListener('click', function () {
   frontendModal.classList.add('modal__active')
+  modal.classList.add('modal__overlay-open')
+  document.documentElement.style.overflow = 'hidden'
+  document.body.scroll = 'no' // IE
 })
 
 designBtnView.addEventListener('click', function () {
   designModal.classList.add('modal__active')
+  modal.classList.add('modal__overlay-open')
+  document.documentElement.style.overflow = 'hidden'
+  document.body.scroll = 'no' // IE
 })
 
 closeModal.forEach((target) => {
   target.addEventListener('click', () => {
-    const modal = target.parentElement
-    modal.classList.remove('modal__active')
+    const currentmodal = target.parentElement
+    modal.classList.remove('modal__overlay-open')
+    currentmodal.classList.remove('modal__active')
+    document.documentElement.style.overflow = 'auto'
+    document.body.scroll = 'yes' // IE
   })
 })
 
