@@ -139,10 +139,14 @@ const fontBtnView = document.querySelector('.front__service')
 const designBtnView = document.querySelector('.design__service')
 const modal = document.querySelector('.modal__overlay')
 const closeModal = document.querySelectorAll('.modal__close')
+const btnTop = document.querySelector('.btn__top')
+btnTop.classList.add('btn__top-active')
 
 fontBtnView.addEventListener('click', function () {
   frontendModal.classList.add('modal__active')
   modal.classList.add('modal__overlay-open')
+  btnTop.classList.remove('btn__top-active')
+
   document.documentElement.style.overflow = 'hidden'
   document.body.scroll = 'no' // IE
 })
@@ -150,6 +154,8 @@ fontBtnView.addEventListener('click', function () {
 designBtnView.addEventListener('click', function () {
   designModal.classList.add('modal__active')
   modal.classList.add('modal__overlay-open')
+  btnTop.classList.remove('btn__top-active')
+
   document.documentElement.style.overflow = 'hidden'
   document.body.scroll = 'no' // IE
 })
@@ -159,6 +165,8 @@ closeModal.forEach((target) => {
     const currentmodal = target.parentElement
     modal.classList.remove('modal__overlay-open')
     currentmodal.classList.remove('modal__active')
+    btnTop.classList.add('btn__top-active')
+
     document.documentElement.style.overflow = 'auto'
     document.body.scroll = 'yes' // IE
   })
@@ -242,7 +250,7 @@ function activeLink() {
   let currentSection = passedSections.at(-1).id
 
   menuLinks.forEach((link) => link.classList.remove('active'))
-  //menuLinks[currentSection].classList.add('active')
+  menuLinks[currentSection].classList.add('active')
 }
 activeLink()
 
