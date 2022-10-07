@@ -33,61 +33,61 @@ function btnToTop() {
 // ScrollReveal ===================
 const slideTop = {
   mobile: true,
-  delay: 250,
-  duration: 750,
+  delay: 0,
+  duration: 550,
   reset: true,
   origin: 'top',
   distance: '100px',
   easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
   viewOffset: {
-    top: 0,
+    top: 200,
     right: 0,
-    bottom: 0,
+    bottom: 200,
     left: 0
   }
 }
 const slideBotton = {
   mobile: true,
-  delay: 250,
-  duration: 750,
+  delay: 0,
+  duration: 550,
   reset: true,
   origin: 'bottom',
   distance: '100px',
   easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
   viewOffset: {
-    top: 100,
+    top: 200,
     right: 0,
-    bottom: 0,
+    bottom: 200,
     left: 0
   }
 }
 const slideleft = {
   mobile: true,
-  delay: 250,
-  duration: 750,
+  delay: 0,
+  duration: 550,
   reset: true,
   origin: 'left',
   distance: '100px',
   easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
   viewOffset: {
-    top: 100,
+    top: 200,
     right: 0,
-    bottom: 0,
+    bottom: 200,
     left: 0
   }
 }
 const slideright = {
   mobile: true,
-  delay: 250,
-  duration: 750,
+  delay: 0,
+  duration: 550,
   reset: true,
   origin: 'rigt',
   distance: '100px',
   easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
   viewOffset: {
-    top: 100,
+    top: 200,
     right: 0,
-    bottom: 0,
+    bottom: 200,
     left: 0
   }
 }

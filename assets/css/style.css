@@ -847,6 +847,7 @@ section#home .elements img:nth-child(2) {
   justify-content: center;
   padding-top: 6rem;
   flex-wrap: wrap;
+  background-color: #fff;
 }
 
 #habilidades .wrapper {
