@@ -294,6 +294,7 @@ h1 {
 
 .nav__link ul {
   display: flex;
+  align-items: center;
   position: relative;
   gap: 3rem;
   text-transform: lowercase;
@@ -311,6 +312,26 @@ h1 {
 
 .nav__link ul li a {
   color: var(--text-light-color);
+}
+
+.nav__link ul li:last-child {
+  background: linear-gradient(130deg, #2ecc71, #27ae60);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  opacity: 0.75;
+}
+
+.nav__link ul li:last-child a {
+  color: #fff;
+}
+
+.nav__link ul li:last-child:hover {
+  opacity: 1;
+}
+
+.nav__link ul li:last-child:hover a {
+  color: #fff;
 }
 
 .nav__link ul li a i {
@@ -340,6 +361,13 @@ h1 {
 .nav__link ul li.active::after {
   width: 75%;
   opacity: 0.2;
+}
+
+.nav__link ul li:last-child::after,
+.nav__link ul li:last-child.active::after {
+  width: 75%;
+  opacity: 0;
+  background-color: #fff;
 }
 
 .nav__link ul li:hover,
@@ -373,7 +401,6 @@ footer small {
   transition: 0.3s ease-in;
   opacity: 0;
 }
-
 
 .btn__top-active {
   bottom: 2rem;
@@ -1863,7 +1890,6 @@ section#home .elements img:nth-child(2) {
     width: 100%;
     height: 300vh;
     top: 0;
-
   }
 
   .modal__active {
@@ -2005,4 +2031,3 @@ section#home .elements img:nth-child(2) {
 
 @media (max-width: 767.98px) {
 }
-
